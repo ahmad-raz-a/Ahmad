@@ -1,4 +1,114 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+:root{
+    --wh:rgb(255, 255, 255);
+    --wh01:rgb(204, 204, 204);
+    --wh02:rgb(108, 108, 108);
+}
+
 body{
-    background: rgb(0, 0, 0);
+    background: var(--wh);
+}
+.main{
+    width: 100%;
+    height: 100%;
+    min-width: 100vw;
+    position: relative;
+    min-height: 100vh;
+
+}
+#salam{
+    padding:20px ;
+    position: relative;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#salam>h1{
+    transition: 1s;
+    font-size: 5em;
+    color: var(--wh);
+    text-shadow: 2px 2px 5px var(--wh01),
+    2px -2px 5px var(--wh01),-2px 2px 5px var(--wh01),
+    -2px -2px 5px var(--wh01);
+}
+.main>.navbar{
+    width: 100%;
+    height: 10vh;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    
+    
+}
+.navbar>ul{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+ul>li{
+    list-style: none;
+    width: 100px;
+    height: 40px;
+    background: var(--wh);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--wh01),-2px 2px 5px var(--wh01)
+    ,2px -2px 5px var(--wh01),-2px -2px 5px var(--wh01);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul>li>a{
+    text-decoration: none;
+    color: var(--wh02);
+}
+#Home{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: url(photo.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    
+}
+#Home::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background: rgba(123, 123, 123, 0.511);
+}
+#Home>.leftHome{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    backdrop-filter: blur(40px);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.leftHome >h1,h1>span{
+    color: rgb(115 115 115);
+    font-size: 15vh;
+    text-shadow: 4px 4px 8px rgb(98, 98, 98),
+    -4px 4px 8px rgb(98, 98, 98),4px -4px 8px rgb(98, 98, 98)
+    ,-4px -4px 8px rgb(98, 98, 98);
+}
+#ahmad{
+    color: rgb(218, 218, 218);
     
 }
